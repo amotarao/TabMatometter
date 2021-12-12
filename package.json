@@ -2,5 +2,6 @@
   "name": "TabMatometter",
   "version": "0.0.1",
   "main": "index.js",
-  "author": "Amon Sawamura <amon.sawamura@gmail.com>"
+  "author": "Amon Sawamura <amon.sawamura@gmail.com>",
+  "license": "MIT"
 }

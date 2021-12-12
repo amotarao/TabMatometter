@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Amon Sawamura <amon.sawamura@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/chrome": "^0.0.170",
     "typescript": "^4.5.3"

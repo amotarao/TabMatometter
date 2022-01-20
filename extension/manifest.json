@@ -1,0 +1,20 @@
+{
+  "name": "Tab Matometter",
+  "description": "タブをオリジンでまとめる",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_icon": {
+      "128": "./icons/white128.png"
+    },
+    "default_title": "Matomeru"
+  },
+  "background": {
+    "service_worker": "./src/background.js"
+  }
+}

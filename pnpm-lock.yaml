@@ -9,44 +9,44 @@ importers:
   .:
     devDependencies:
       '@types/chrome':
-        specifier: ^0.0.170
-        version: 0.0.170
+        specifier: ^0.0.304
+        version: 0.0.304
       typescript:
-        specifier: ^4.5.3
-        version: 4.5.3
+        specifier: ^5.7.3
+        version: 5.7.3
 
 packages:
 
-  '@types/chrome@0.0.170':
-    resolution: {integrity: sha512-X6IKLdc/fJyCKxGlCUauL3OKmnhzS29Q2NnlErAiLC3voxvSVG1ISG+l24Q3kFZXmnc543KzElIjDQRvQ/yEBQ==}
+  '@types/chrome@0.0.304':
+    resolution: {integrity: sha512-ms9CLILU+FEMK7gcmgz/Mtn2E81YQWiMIzCFF8ktp98EVNIIfoqaDTD4+ailOCq1sGjbnEmfJxQ1FAsQtk5M3A==}
 
-  '@types/filesystem@0.0.32':
-    resolution: {integrity: sha512-Yuf4jR5YYMR2DVgwuCiP11s0xuVRyPKmz8vo6HBY3CGdeMj8af93CFZX+T82+VD1+UqHOxTq31lO7MI7lepBtQ==}
+  '@types/filesystem@0.0.36':
+    resolution: {integrity: sha512-vPDXOZuannb9FZdxgHnqSwAG/jvdGM8Wq+6N4D/d80z+D4HWH+bItqsZaVRQykAn6WEVeEkLm2oQigyHtgb0RA==}
 
-  '@types/filewriter@0.0.29':
-    resolution: {integrity: sha512-BsPXH/irW0ht0Ji6iw/jJaK8Lj3FJemon2gvEqHKpCdDCeemHa+rI3WBGq5z7cDMZgoLjY40oninGxqk+8NzNQ==}
+  '@types/filewriter@0.0.33':
+    resolution: {integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==}
 
-  '@types/har-format@1.2.8':
-    resolution: {integrity: sha512-OP6L9VuZNdskgNN3zFQQ54ceYD8OLq5IbqO4VK91ORLfOm7WdT/CiT/pHEBSQEqCInJ2y3O6iCm/zGtPElpgJQ==}
+  '@types/har-format@1.2.16':
+    resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
 
-  typescript@4.5.3:
-    resolution: {integrity: sha512-eVYaEHALSt+s9LbvgEv4Ef+Tdq7hBiIZgii12xXJnukryt3pMgJf6aKhoCZ3FWQsu6sydEnkg11fYXLzhLBjeQ==}
-    engines: {node: '>=4.2.0'}
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
 
-  '@types/chrome@0.0.170':
+  '@types/chrome@0.0.304':
     dependencies:
-      '@types/filesystem': 0.0.32
-      '@types/har-format': 1.2.8
+      '@types/filesystem': 0.0.36
+      '@types/har-format': 1.2.16
 
-  '@types/filesystem@0.0.32':
+  '@types/filesystem@0.0.36':
     dependencies:
-      '@types/filewriter': 0.0.29
+      '@types/filewriter': 0.0.33
 
-  '@types/filewriter@0.0.29': {}
+  '@types/filewriter@0.0.33': {}
 
-  '@types/har-format@1.2.8': {}
+  '@types/har-format@1.2.16': {}
 
-  typescript@4.5.3: {}
+  typescript@5.7.3: {}

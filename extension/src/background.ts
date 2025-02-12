@@ -13,7 +13,7 @@ const main: Parameters<typeof chrome.action.onClicked.addListener>[0] = async ()
  * 現在のウィンドウのすべてのタブを取得
  */
 const getAllTabs = async (): Promise<chrome.tabs.Tab[]> => {
-  const options = {
+  const options: chrome.tabs.QueryInfo = {
     currentWindow: true,
   };
   const tabs = await chrome.tabs.query(options);

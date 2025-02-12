@@ -28,7 +28,7 @@ const separateTabsByGroup = (tabs: chrome.tabs.Tab[]): { groupId: number, tabs: 
   tabs.forEach((tab) => {
     groupIdsSet.add(tab.groupId);
   });
-  const groupIds = [...groupIdsSet];
+  const groupIds = Array.from(groupIdsSet);
 
   const groups = groupIds.map((groupId) => {
     return {
@@ -77,7 +77,7 @@ const sortTabs = async (group: { groupId: number, tabs: chrome.tabs.Tab[] }): Pr
     })
   );
 
-  const origins = [...originsSet];
+  const origins = Array.from(originsSet);
 
   tabs.sort((tabA, tabB) => {
     const indexA = origins.indexOf(tabA.origin);
@@ -88,11 +88,8 @@ const sortTabs = async (group: { groupId: number, tabs: chrome.tabs.Tab[] }): Pr
     tab.newIndex = i + offset;
   });
 
-  Promise.all(
-    tabs.map(async (tab, i) => {
-      if (tab.index === tab.newIndex) {
-        return;
-      }
+  await Promise.all(
+    tabs.map(async (tab) => {
       await chrome.tabs.move(tab.tabId, { index: tab.newIndex });
     })
   );

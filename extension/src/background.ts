@@ -23,7 +23,9 @@ const getAllTabs = async (): Promise<chrome.tabs.Tab[]> => {
 /**
  * グループIDごとにタブを分類
  */
-const separateTabsByGroup = (tabs: chrome.tabs.Tab[]): { groupId: number, tabs: chrome.tabs.Tab[] }[] => {
+const separateTabsByGroup = (
+  tabs: chrome.tabs.Tab[],
+): { groupId: number; tabs: chrome.tabs.Tab[] }[] => {
   const groupIdsSet = new Set<number>();
   tabs.forEach((tab) => {
     groupIdsSet.add(tab.groupId);
@@ -53,13 +55,13 @@ const getTabIndex = async (tabId: number): Promise<number> => {
 /**
  * グループごとにタブの並べ替え
  */
-const sortTabs = async (group: { groupId: number, tabs: chrome.tabs.Tab[] }): Promise<void> => {
+const sortTabs = async (group: { groupId: number; tabs: chrome.tabs.Tab[] }): Promise<void> => {
   const originsSet = new Set<string>();
   let offset = Infinity;
 
   const tabs = await Promise.all(
     group.tabs.map(async (tab) => {
-      const url = tab.url || '';
+      const url = tab.url || "";
       const origin = new URL(url).origin;
       originsSet.add(origin);
 
@@ -74,7 +76,7 @@ const sortTabs = async (group: { groupId: number, tabs: chrome.tabs.Tab[] }): Pr
         index: index,
         newIndex: -1,
       };
-    })
+    }),
   );
 
   const origins = Array.from(originsSet);
@@ -91,7 +93,7 @@ const sortTabs = async (group: { groupId: number, tabs: chrome.tabs.Tab[] }): Pr
   await Promise.all(
     tabs.map(async (tab) => {
       await chrome.tabs.move(tab.tabId, { index: tab.newIndex });
-    })
+    }),
   );
 };
 

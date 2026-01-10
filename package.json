@@ -1,9 +1,9 @@
 {
   "name": "TabMatometter",
   "version": "0.0.1",
-  "main": "index.js",
-  "author": "Amon Sawamura <amon.sawamura@gmail.com>",
   "license": "MIT",
+  "author": "Amon Sawamura <amon.sawamura@gmail.com>",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "format": "oxfmt",

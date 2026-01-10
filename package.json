@@ -5,7 +5,9 @@
   "author": "Amon Sawamura <amon.sawamura@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.304",

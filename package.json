@@ -1,14 +1,21 @@
 {
   "name": "tab-matometter",
   "version": "0.0.1",
-  "main": "index.js",
-  "author": "Amon Sawamura <amon.sawamura@gmail.com>",
   "license": "MIT",
+  "author": "Amon Sawamura <amon.sawamura@gmail.com>",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.304",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "oxfmt": "^0.23.0",
     "typescript": "^5.7.3"
-  }
+  },
+  "packageManager": "pnpm@10.28.0"
 }

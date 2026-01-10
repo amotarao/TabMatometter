@@ -3,11 +3,7 @@
   "description": "タブをオリジンでまとめる",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["tabs", "activeTab", "scripting"],
   "action": {
     "default_icon": {
       "128": "./icons/white128.png"
